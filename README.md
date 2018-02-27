@@ -5,21 +5,22 @@ segment with UIPageViewController
 ## Init
 > Use an object of ICESegmentConfig to control the display style
 ```
-	ICESegmentPageViewController *segVC = [[ICESegmentPageViewController alloc]init];
-    segVC.dataSource = self;
-    segVC.delegate = self;
-    ICESegmentConfig *config = [[ICESegmentConfig alloc] init];
-    config.lineWidth = 50;
-    config.lineHeight = 1.5;
-    config.divideParent = YES;
-    config.segmentColor = [UIColor redColor];
-    config.selectedColor = [UIColor blackColor];
-    config.selectFont = [UIFont boldSystemFontOfSize:15];
-    segVC.config = config;
-    segVC.view.frame = frame;
+ICESegmentPageViewController *segVC = [[ICESegmentPageViewController alloc]init];
+segVC.dataSource = self;
+segVC.delegate = self;
 
-    [self addChildViewController:segVC];
-    [self.view addSubview:segVC.view];
+ICESegmentConfig *config = [[ICESegmentConfig alloc] init];
+config.lineWidth = 50;
+config.lineHeight = 1.5;
+config.divideParent = YES;
+config.segmentColor = [UIColor redColor];
+config.selectedColor = [UIColor blackColor];
+config.selectFont = [UIFont boldSystemFontOfSize:15];
+segVC.config = config;
+
+segVC.view.frame = frame;
+[self addChildViewController:segVC];
+[self.view addSubview:segVC.view];
 
 ```
 
@@ -27,13 +28,13 @@ segment with UIPageViewController
 >  Warning：Because internal this implementation only holds sub-viewControllers' weak references, so you must hold all of sub-viewControllers' strong references 
 
 ```
-    - (NSInteger)segmentCount {
-    	return 5;
-	}
+- (NSInteger)segmentCount {
+   return 5;
+ }
 
-	- (UIViewController *)segmentViewController:(NSInteger)index {
-    	return vc;
-	}
+- (UIViewController *)segmentViewController:(NSInteger)index {
+   return vc;
+}
 ```
 
 ## Delegate
