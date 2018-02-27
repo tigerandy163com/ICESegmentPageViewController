@@ -60,13 +60,13 @@ segment with UIPageViewController
 ## Reload 
 
 ```
-	- (void)reload {
-    	[self.segVC reloadData];
-	}
+- (void)reload {
+   [self.segVC reloadData];
+}
  ```
 
 ##  SetSelect
 
 ```
-    	segVC.selectedIndex = 3;
+segVC.selectedIndex = 3;
 ```
