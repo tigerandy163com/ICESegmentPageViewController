@@ -44,7 +44,7 @@
     config.lineWidth = 50;
     config.lineHeight = 1.5;
     config.divideParent = YES;
-//    config = YES;
+    config.preloadView = YES;
     config.segmentColor = [UIColor redColor];
     config.selectedColor = [UIColor blackColor];
     config.selectFont = [UIFont boldSystemFontOfSize:15];

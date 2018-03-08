@@ -307,7 +307,9 @@
     for (int index = 0; index < [self segmentCount]; index++) {
         UIViewController * vc = [self segmentViewController:index];
         [self.viewControllers setObject:@(index) forKey:vc];
-        [vc view];
+        if (self.config.preloadView) {
+            [vc view];
+        }
     }
     NSAssert(self.viewControllers.count > 0, @"Must have one childViewCpntroller at least");
 }

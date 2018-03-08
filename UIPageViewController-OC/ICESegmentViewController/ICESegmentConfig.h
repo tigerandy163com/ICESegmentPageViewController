@@ -29,4 +29,6 @@
 
 @property(nonatomic) BOOL alignCenter;
 
+@property(nonatomic) BOOL preloadView;
+
 @end
